@@ -1,0 +1,5 @@
+There are devices of various sizes having same mobile OS, so to target an audience of one platform you need to furnish icons of all the mobiles types too. It is important that we prepare icons of exact shapes and sizes as required by particular mobile OS.
+
+Here we are using the folders res/icon/ios and res/icon/android/drawable-xxxx.
+
+To get this work done fast, you can create a logo of size 1024x1024 and log on to makeappicon.com. This website will help you instantly create logos of all size and for both android and iOS platform.
