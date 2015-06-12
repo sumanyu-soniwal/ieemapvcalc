@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IEEMA PV Calculator</title>
+<!--
+    This template can be used for simple tab view application that has tabs at the bottom to switch views, for applications like Phone app, Facebook App or Instagram app.
+--> 
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0;" />
+    
+   
+
+		<script>
+			
+			function calcPVal() {
+						var P0 = document.getElementById("P0").value;
+					
+						var AL = document.getElementById("AL").value;
+						AL = (AL/ document.getElementById("AL0").value);
+						
+						var ES = document.getElementById("ES").value;
+						ES = (ES/ document.getElementById("ES0").value);
+						
+						var IS = document.getElementById("IS").value;
+						IS = (IS/ document.getElementById("IS0").value);
+						
+						var IM = document.getElementById("IM").value;
+						IM = (IM/ document.getElementById("IM0").value);
+						
+						var TB = document.getElementById("TB").value;
+						TB = (TB/ document.getElementById("TB0").value);
+						
+						var W = document.getElementById("W").value;
+						W = (W/ document.getElementById("W0").value);
+						
+						var result = 17 * AL;
+						result += 33 * ES;
+						result += 9 * IS;
+						result += 5 * IM;
+						result += 11 * TB;
+						result += 12 * W;
+						result += 13;
+						result *= P0;
+						result /= 100;
+						
+						document.getElementById("demo").innerHTML = result;
+						
+						
+			}
+			
+
+		</script>	
+</head>
+<body> 
+<div id="afui">
+    
+    <div id="content" style=""> 
+        
+    <!--Tab View Pages-->
+        <div class="panel" title="Aluminum" id="page1" data-tab="tab1" selected="true">
+            <header>
+                <h1>Aluminium</h1>
+            </header>
+             <input name="name" type="text" id="P0" placeholder="P~" /><br><br>
+            <input name="email" type="text" id="AL" placeholder="AL" /><br><br>
+			<input name="name" type="text" id="AL0" placeholder="AL~" /><br><br>
+            <input name="email" type="text" id="ES" placeholder="ES" /><br><br>
+			<input name="name" type="text" id="ES0" placeholder="ES~" /><br><br>
+            <input name="email" type="text" id="IS" placeholder="IS" /><br><br>
+			<input name="name" type="text" id="IS0" placeholder="IS~" /><br><br>
+            <input name="email" type="text" id="IM" placeholder="IM" /><br><br>
+			<input name="name" type="text" id="IM0" placeholder="IM~" /><br><br>
+            <input name="email" type="text" id="TB" placeholder="TB" /><br><br>
+			<input name="name" type="text" id="TB0" placeholder="TB~" /><br><br>
+            <input name="email" type="text" id="W" placeholder="W" /><br><br>
+			<input name="name" type="text" id="W0" placeholder="W~" /><br><br>
+			
+			<input type="button" onclick="calcPVal()" value="="/>
+			
+			<p id="demo"></p>
+			
+        </div>
+        
+        <div class="panel" title="Copper" id="page2" data-tab="tab2">
+            <header>
+                <h1>Copper</h1>
+            </header>
+            <p>This is view for second Tab</p>
+        </div>
+        
+        <div class="panel" title="Settings" id="page3" data-tab="tab3">
+            <header>
+                <h1>Settings</h1>
+            </header>
+            <p>This is view for third Tab</p>
+        </div>
+        
+        <div class="panel" title="About" id="page4" data-tab="tab4">
+            <header>
+                <h1>About</h1>
+            </header>
+            <p>This is view for fourth Tab</p>
+        </div>
+        
+    </div>
+    
+    <!--Footer with Tabs or Navigation bar -->
+    <div id="navbar">
+        <a href="#page1" id='tab1' class="icon home" data-transition="none">Aluminium</a>
+        <a href="#page2" id='tab2' class="icon heart" data-transition="none">Copper</a>
+        <a href="#page3" id='tab3' class="icon chat" data-transition="none">Settings</a>
+        <a href="#page4" id='tab4' class="icon user" data-transition="none">About</a>
+    </div>
+
+</div>
+</body>
+</html>    
